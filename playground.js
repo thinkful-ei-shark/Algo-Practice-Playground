@@ -19,9 +19,26 @@ function arrayFun() {
     arr.push('boo');
     arr.push('bar');
     // ^^ HowDo We Get These Values To Print??
-    console.log(arr);
-    console.log(arr.get(1))
+    console.log(arr);       // Array { length: 3, _capacity: 3, ptr: 0 }
+    console.log(arr.get(0)) // NAN??
+    console.log(arr[0])     // undefined
+    console.log(arr.ptr)     // 0
+    console.log(arr.ptr.value) // undefined
 }
+
+// UURLify a string
+function urlify(string) {
+    // replace spaces with %20
+    // need global flag 'g'
+    let newString = string.replace(/ /g, '%20');
+    return newString
+}
+let test = 'www.thinkful.com /tauh ida parv een'
+console.log(urlify(test))
+
+
+
+
 
 // Given a document, implement an algorithm
 //  to count the number of word occurrences.
@@ -49,4 +66,5 @@ function wordOccurences(document) {
     return wordMap;
 };
 
-console.log(wordOccurences(document3))
+//console.log(wordOccurences(document3))
+//arrayFun()
